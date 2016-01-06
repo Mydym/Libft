@@ -6,7 +6,7 @@
 /*   By: vgrenier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/29 15:19:15 by vgrenier          #+#    #+#             */
-/*   Updated: 2015/12/06 21:05:58 by vgrenier         ###   ########.fr       */
+/*   Updated: 2016/01/06 19:12:23 by vgrenier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ static char		**ft_filltab(const char *s, char c, int nb, char **tab)
 			tab[i] = (char *)malloc((len + 1) * sizeof(char));
 			if (tab[i] == NULL)
 				return (NULL);
-			if (*(s + 1) == 0)
+			if (*(s + 1) == 0 && *s != c)
 				tab[i] = ft_strsub(s - len + 1, 0, len);
 			else
 				tab[i] = ft_strsub(s - len, 0, len);

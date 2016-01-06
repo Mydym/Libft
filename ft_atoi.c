@@ -6,7 +6,7 @@
 /*   By: vgrenier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 12:18:09 by vgrenier          #+#    #+#             */
-/*   Updated: 2015/12/03 14:03:47 by vgrenier         ###   ########.fr       */
+/*   Updated: 2016/01/06 15:23:16 by vgrenier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,6 @@ int		ft_atoi(const char *str)
 		i++;
 	}
 	if (i == 20)
-		return (-1);
+		return (0);
 	return (resultat * sign);
 }

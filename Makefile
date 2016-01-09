@@ -6,7 +6,7 @@
 #    By: vgrenier <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/11/25 20:15:57 by vgrenier          #+#    #+#              #
-#    Updated: 2015/11/30 18:56:06 by vgrenier         ###   ########.fr        #
+#    Updated: 2016/01/08 16:30:47 by vgrenier         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,8 +21,7 @@ all: $(NAME)
 $(NAME):
 	gcc -Wall -Werror -Wextra -c $(SRC) ; ar rc $(NAME) $(OBJ) ; ranlib $(NAME)
 
-test:
-	gcc -Wall -Werror -Wextra -c $(SRC) ; ar rc $(NAME) $(OBJ) ; ranlib $(NAME)
+test: all
 	gcc -Wall -Werror -Wextra main.c -L. -lft
 	
 clean:

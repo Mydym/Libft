@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_realloc.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vgrenier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/25 12:08:09 by vgrenier          #+#    #+#             */
-/*   Updated: 2016/01/22 17:04:13 by vgrenier         ###   ########.fr       */
+/*   Created: 2016/01/22 17:07:56 by vgrenier          #+#    #+#             */
+/*   Updated: 2016/01/26 16:54:42 by vgrenier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
+#include <stdlib.h>
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_realloc(char *str, int len)
 {
-	unsigned char		*s1;
-	const unsigned char	*s2;
-	size_t				i;
+	char	*tmp;
+	int		i;
 
-	s1 = (unsigned char *)dst;
-	s2 = (const unsigned char *)src;
 	i = 0;
-	while (i < n)
-	{
-		s1[i] = (unsigned char)s2[i];
+	while (str[i] != '\0')
 		i++;
-	}
-	return (dst);
+	if ((tmp = (char *)malloc((len + 1) * sizeof(char))))
+		if (ft_memcpy((void *)tmp, (void *)str, i + 1))
+		{
+			free(str);
+			return ((void *)tmp);
+		}
+	return (NULL);
 }

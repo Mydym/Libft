@@ -6,7 +6,7 @@
 /*   By: vgrenier <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 15:37:31 by vgrenier          #+#    #+#             */
-/*   Updated: 2016/01/09 14:00:48 by vgrenier         ###   ########.fr       */
+/*   Updated: 2016/01/26 16:51:55 by vgrenier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ void				*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void				*ft_memmove(void *dst, const void *src, size_t len);
 void				*ft_memchr(const void *s, int c, size_t n);
 void				*ft_memalloc(size_t size);
+void				*ft_realloc(char *str, int len);
 void				ft_memdel(void **ap);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 size_t				ft_strlen(const char *s);

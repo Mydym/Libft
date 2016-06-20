@@ -72,6 +72,9 @@ ft_strequ.c \
 ft_strncat.c \
 ft_strstr.c \
 ft_strrevchr.c \
+ft_convertsectonsec.c \
+ft_intlen.c \
+ft_pchar_del.c \
 get_next_line.c
 
 OBJ = $(SRC:.c=.o)

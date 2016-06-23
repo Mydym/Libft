@@ -83,5 +83,6 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 unsigned long long	ft_convertsectonsec(unsigned long long sec);
 long				ft_intlen(long nombre);
 void				ft_pchar_del(char **s);
+int					ft_ppchar_nb_str(char **str);
 
 #endif
